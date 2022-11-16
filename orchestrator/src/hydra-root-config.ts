@@ -6,7 +6,7 @@ registerApplication({
     System.import<LifeCycles>(
       'https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js'
     ),
-  activeWhen: ['/'],
+  activeWhen: (location: Location) => location.pathname === '/', 
 })
 
 registerApplication({
