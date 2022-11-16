@@ -18,7 +18,7 @@ registerApplication({
 registerApplication({
   name: '@hydra/blog',
   app: () => System.import<LifeCycles>('@hydra/blog'),
-  activeWhen: ['/news'],
+  activeWhen: ['/blog'],
 })
 
 // registerApplication({
