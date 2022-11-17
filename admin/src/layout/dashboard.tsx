@@ -4,7 +4,6 @@ import MenuIcon from '@mui/icons-material/Menu'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import Badge from '@mui/material/Badge'
 import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
 import CssBaseline from '@mui/material/CssBaseline'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
@@ -12,9 +11,10 @@ import List from '@mui/material/List'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
+import { Outlet } from 'react-router-dom'
 import { AppBar, Drawer } from '../components/dashboard'
 import { mainListItems, secondaryListItems } from '../components/listItems'
-import { Outlet } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 type Props = {}
 
@@ -27,6 +27,10 @@ const DashboardLayout: React.FC<Props> = () => {
 
   return (
     <ThemeProvider theme={mdTheme}>
+      <Helmet>
+        <title>Hydra Admin</title>
+      </Helmet>
+
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
 
